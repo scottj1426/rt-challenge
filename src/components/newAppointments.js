@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import moment from "moment";
-import { Grid } from "semantic-ui-react";
+import { Grid, Button } from "semantic-ui-react";
 
-class newAppointments extends Component {
+class NewAppointments extends Component {
     render() {
         return (
             <div>
-                Schedule A new Appointment
+                <Button>
+                    Schedule A new Appointments
+                </Button>
             </div>
         );
     }
 }
 
-export default newAppointments;
+export default NewAppointments;
