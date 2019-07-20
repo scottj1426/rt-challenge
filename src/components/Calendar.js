@@ -22,9 +22,22 @@ class Calendar extends Component {
         </Grid.Row>
       );
     });
+
+    let months = this.months.map(month => {
+        return (
+          <Grid.Row>
+            <Grid.Column key={month}>
+              <th key={month} className="column">
+                {month}
+              </th>
+            </Grid.Column>
+          </Grid.Row>
+        );
+    });
     return (
       <div>
         <div>Calendar</div>
+        <div>{months}</div>
         <div>{weekDays}</div>
       </div>
     );
