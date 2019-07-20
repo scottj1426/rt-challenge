@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Calendar extends Component {
     render() {
         return (
             <div>
-                <div>Header</div>
-                <div>Days</div>
-                <div>Cells</div>                
+                <div>Calendar</div>
+              
             </div>
         );
     }
