@@ -1,24 +1,34 @@
-import React, { Component } from 'react';
-import moment from 'moment';
+import React, { Component } from "react";
+import moment from "moment";
+import { Grid } from "semantic-ui-react";
 
 class Calendar extends Component {
-    weekDays = moment.weekdays();
+  weekDays = moment.weekdays();
+  months = moment.months();
 
-    render() {
-        let weekDays = this.weekDays.map(day => {
-            return (
-              <th key={day} className="week-day">
-               {day}
-              </th>
-            );
-         });
-        return (
-            <div>
-                <div>Calendar</div>
-                    <div>{weekDays}</div>
-            </div>
-        );
-    }
+  state = {
+    selectedDay: null,
+  }
+
+  render() {
+    let weekDays = this.weekDays.map(day => {
+      return (
+        <Grid.Row>
+          <Grid.Column key={day}>
+            <th key={day} className="column">
+              {day}
+            </th>
+          </Grid.Column>
+        </Grid.Row>
+      );
+    });
+    return (
+      <div>
+        <div>Calendar</div>
+        <div>{weekDays}</div>
+      </div>
+    );
+  }
 }
 
 export default Calendar;
