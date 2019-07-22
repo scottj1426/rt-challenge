@@ -8,7 +8,7 @@ class NewAppointments extends Component {
       <div>
         <Modal trigger={<Button>Create Appointments</Button>}>
           <Modal.Content>
-            <Dropdown text="Dates">
+            <Dropdown>
                 <Dropdown.Item text='New' /> 
             </Dropdown>
             <Button>Make Appointment</Button>

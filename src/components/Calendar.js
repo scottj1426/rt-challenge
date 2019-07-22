@@ -7,38 +7,33 @@ class Calendar extends Component {
   months = moment.months();
 
   state = {
-    selectedDay: null,
-  }
+    selectedDay: null
+  };
+
+  //grab months
+
+  //grab weeks
+
+  //format calendar + cells
+
+  //apply months to cells
 
   render() {
     let weekDays = this.weekDays.map(day => {
       return (
-        <Grid.Row>
-          <Grid.Column key={day}>
+        <Grid.Column key={day}>
+          <Grid.Row>
             <th key={day} className="column">
               {day}
             </th>
-          </Grid.Column>
-        </Grid.Row>
+          </Grid.Row>
+        </Grid.Column>
       );
     });
 
-    let months = this.months.map(month => {
-        return (
-          <Grid.Row>
-            <Grid.Column key={month}>
-              <th key={month} className="column">
-                {month}
-              </th>
-            </Grid.Column>
-          </Grid.Row>
-        );
-    });
-    console.log(months)
     return (
       <div>
         <div>Calendar</div>
-        <div>{months}</div>
         <div>{weekDays}</div>
       </div>
     );
