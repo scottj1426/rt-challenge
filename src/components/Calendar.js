@@ -15,6 +15,8 @@ class Calendar extends Component {
 
   //grab week days
 
+  //grab days of month
+
   //format calendar + cells
   renderCalendar() {
     let monthStart = new moment().startOf('month').format("YYYY-DD-MM");
@@ -26,7 +28,7 @@ class Calendar extends Component {
 
     while (weekdays <= weekEnd){
         for(){
-            
+
         }
     }
       
