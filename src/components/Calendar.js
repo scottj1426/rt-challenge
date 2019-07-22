@@ -34,6 +34,7 @@ class Calendar extends Component {
           </Grid.Row>
         );
     });
+    console.log(months)
     return (
       <div>
         <div>Calendar</div>

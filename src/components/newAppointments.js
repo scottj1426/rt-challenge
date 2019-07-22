@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import moment from "moment";
-import { Grid, Button } from "semantic-ui-react";
+import { Grid, Button, Modal, Dropdown } from "semantic-ui-react";
 
 class NewAppointments extends Component {
-    render() {
-        return (
-            <div>
-                <Button>
-                    Schedule A new Appointments
-                </Button>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Modal trigger={<Button>Create Appointments</Button>}>
+          <Modal.Content>
+            <Dropdown text="Dates">
+                <Dropdown.Item text='New' /> 
+            </Dropdown>
+            <Button>Make Appointment</Button>
+          </Modal.Content>
+        </Modal>
+      </div>
+    );
+  }
 }
 
 export default NewAppointments;
